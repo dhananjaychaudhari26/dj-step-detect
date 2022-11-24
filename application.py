@@ -14,7 +14,7 @@ from plotly.subplots import make_subplots
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-server = app.server
+application = app.server
 app.layout = html.Div([
     dcc.Upload(
         id='upload-data',
@@ -100,4 +100,5 @@ def update_output(list_of_contents, list_of_names, list_of_dates):
         return children
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    # app.run_server(debug=True)
+    application.run(debug=True, host='0.0.0.0', port=8000, use_reloader=False)
