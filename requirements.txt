@@ -1,0 +1,6 @@
+pandas
+dash
+scipy
+matplotlib
+tensorflow
+gunicorn
